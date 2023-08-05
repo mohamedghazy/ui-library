@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+
 export default function Task({
   task: { id, title, state },
   onArchiveTask,
@@ -28,6 +29,7 @@ export default function Task({
           readOnly={true}
           name="title"
           placeholder="Input title"
+          style={{ background: "red" }}
         />
       </label>
 
@@ -44,6 +46,7 @@ export default function Task({
     </div>
   );
 }
+
 Task.propTypes = {
   /** Composition of the task */
   task: PropTypes.shape({
